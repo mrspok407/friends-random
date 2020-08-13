@@ -16,7 +16,7 @@ const randomSeasonAndEpisode = ({ seasonRange = [5, 10], episodeRange = [1, 23] 
 	setTimeout(() => {
 		const link =
 			seasonNum === 10
-				? `https://friends-online.me/series/${seasonNum}s${episodeNum}e/`
+				? `https://friends-online.me/series/${seasonNum}s${Math.ceil(Math.random() * 17)}e/`
 				: `https://friends-online.me/series/s${seasonNum}e${episodeNum}/`;
 
 		window.location.href = link;

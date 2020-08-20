@@ -1,4 +1,5 @@
 
 document.addEventListener('DOMContentLoaded', function(event) {
-  console.log("test")
+  const test = getElementById("test");
+  test.innerHTML = "test"
 })

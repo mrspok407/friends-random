@@ -1,30 +1,34 @@
-const seasonNumber = document.querySelector(".season__number");
-const episodeNumber = document.querySelector(".episode__number");
-const button = document.querySelector(".button");
+// const seasonNumber = document.querySelector(".season__number");
+// const episodeNumber = document.querySelector(".episode__number");
+// const button = document.querySelector(".button");
 
-console.log("test")
+document.addEventListener('DOMContentLoaded', function(event) {
+  console.log("test")
+})
 
-const randomSeasonAndEpisode = ({ seasonRange = [5, 10], episodeRange = [1, 23] }) => {
-	const seasonNum = Math.ceil(
-		Math.random() * (seasonRange[1] - seasonRange[0]) + seasonRange[0]
-	);
-	const episodeNum = Math.ceil(
-		Math.random() * (episodeRange[1] - episodeRange[0]) + episodeRange[0]
-	);
+
+
+// const randomSeasonAndEpisode = ({ seasonRange = [5, 10], episodeRange = [1, 23] }) => {
+// 	const seasonNum = Math.ceil(
+// 		Math.random() * (seasonRange[1] - seasonRange[0]) + seasonRange[0]
+// 	);
+// 	const episodeNum = Math.ceil(
+// 		Math.random() * (episodeRange[1] - episodeRange[0]) + episodeRange[0]
+// 	);
 	
-	const episodeModified = seasonNum === 10 && episodeNum > 17 ? Math.ceil(Math.random() * 17) : episodeNum
+// 	const episodeModified = seasonNum === 10 && episodeNum > 17 ? Math.ceil(Math.random() * 17) : episodeNum
 
-	seasonNumber.innerHTML = seasonNum;
-	episodeNumber.innerHTML = episodeModified
+// 	seasonNumber.innerHTML = seasonNum;
+// 	episodeNumber.innerHTML = episodeModified
 		
-	setTimeout(() => {
-		const link =
-			seasonNum === 10
-				? `https://friends-online.me/series/${seasonNum}s${episodeModified}e/`
-				: `https://friends-online.me/series/s${seasonNum}e${episodeModified}/`;
+// 	setTimeout(() => {
+// 		const link =
+// 			seasonNum === 10
+// 				? `https://friends-online.me/series/${seasonNum}s${episodeModified}e/`
+// 				: `https://friends-online.me/series/s${seasonNum}e${episodeModified}/`;
 
-		window.location.href = link;
-	}, 1000);
-};
+// 		window.location.href = link;
+// 	}, 1000);
+// };
 
-button.addEventListener("click", randomSeasonAndEpisode);
+// button.addEventListener("click", randomSeasonAndEpisode);

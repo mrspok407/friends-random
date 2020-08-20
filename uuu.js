@@ -10,7 +10,11 @@
      link.title = "Pixibo"
      link.href = "http://cdn.jsdelivr.net/gh/mrspok407/friends-random/qqq.js"
      
-      test.appendChild(link)
+     test.appendChild(link)
+    
+    link.addEventListener("click", function(e){
+      e.preventDefault()
+    })
 })   
 
 

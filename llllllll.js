@@ -1,4 +1,5 @@
     document.addEventListener("DOMContentLoaded", function(event) {
+        console.log("test")
       const test = document.getElementById("test")
       if (!test) return
 

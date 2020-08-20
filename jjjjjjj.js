@@ -11,7 +11,7 @@
         background-color: peru;
     }
 
-    .model {
+    .modal {
       position: fixed;
       z-index: 9999;
       left: 0;
@@ -22,8 +22,9 @@
       background-color: rgb(0,0,0);
       background-color: rgba(0,0,0,0.4);
     }
-
     `
+      let body, modal
+
       document.head.appendChild(style)
 
       var link = document.createElement("a")
@@ -32,25 +33,25 @@
       link.appendChild(linkText)
       link.title = "Pixibo"
       link.href = "http://cdn.jsdelivr.net/gh/mrspok407/friends-random/qqq.js"
-
       test.appendChild(link)
 
       link.addEventListener("click", function(e) {
         e.preventDefault()
 
-        const body = document.getElementsByTagName("body")[0]
-        const modal = document.createElement("div")
+        body = document.getElementsByTagName("body")[0]
+        modal = document.createElement("div")
 
         body.style.overflow = "hidden"
         modal.className = "modal"
         modal.innerHTML = "Hello World"
 
-        document.body.appendChild(modal)
+        body.appendChild(modal)
       })
 
-      // window.onclick = function(event) {
-      //   if (event.target === modal) {
-      //     modal.style.display = "none"
-      //   }
-      // }
+      window.onclick = function(event) {
+        if (event.target === modal) {
+          modal.style.display = "none"
+          body.style.overflow = "visible"
+        }
+      }
     })

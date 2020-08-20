@@ -11,7 +11,7 @@
         background-color: peru;
     }
 
-    .model {
+    .modal {
 
       position: fixed;
       z-index: 9999;

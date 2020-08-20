@@ -11,15 +11,14 @@
         background-color: peru;
     }
 
-    .modal {
-
+    .model {
       position: fixed;
       z-index: 9999;
       left: 0;
       top: 0;
       width: 100%;
-      height: 100vh;
-      overflow: hidden;
+      height: 100%;
+      overflow: auto;
       background-color: rgb(0,0,0);
       background-color: rgba(0,0,0,0.4);
     }
@@ -39,11 +38,19 @@
       link.addEventListener("click", function(e) {
         e.preventDefault()
 
+        const body = document.getElementsByTagName("body")[0]
         const modal = document.createElement("div")
+
+        body.style.overflow = "hidden"
         modal.className = "modal"
         modal.innerHTML = "Hello World"
 
         document.body.appendChild(modal)
       })
-    })
 
+      // window.onclick = function(event) {
+      //   if (event.target === modal) {
+      //     modal.style.display = "none"
+      //   }
+      // }
+    })
